@@ -1,8 +1,9 @@
 language: java
 notifications:
   email: false
-after_success:
-  script: jenkins/scripts/deliver.sh
+before_deploy:
+  provider: script
+  script: ./jenkins/scripts/deliver.sh
 deploy:
   provider: pages
   skip_cleanup: true
