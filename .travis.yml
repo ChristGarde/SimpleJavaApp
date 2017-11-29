@@ -2,8 +2,7 @@ language: java
 notifications:
   email: false
 before_deploy:
-  provider: script
-  script: ./jenkins/scripts/deliver.sh
+  - bash ./jenkins/scripts/deliver.sh
 deploy:
   provider: pages
   skip_cleanup: true
